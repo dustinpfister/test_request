@@ -5,6 +5,7 @@ fs = require('fs');
 
 fs.createReadStream('google.encrypted')
 
+// decipher with password from command line, or '1234'
 .pipe(crypto.createDecipher('aes-256-cbc',process.argv[2] || '1234'))
 
 .pipe(new stream.Transform({
