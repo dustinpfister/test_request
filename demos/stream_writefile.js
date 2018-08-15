@@ -1,5 +1,4 @@
 let request = require('request'),
-stream = require('stream'),
 fs = require('fs'),
 
 // requesting a url given from the command line, or my home page
