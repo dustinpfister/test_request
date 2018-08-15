@@ -1,5 +1,4 @@
 let request = require('request'),
-stream = require('stream'),
 fs = require('fs'),
 
 // requesting "War, and peace" (it's over 500,000 words)
