@@ -9,6 +9,7 @@
   "author": "Dustin Pfister",
   "license": "GPL-3.0",
   "dependencies": {
+    "pngjs": "^3.3.3",
     "request": "^2.88.0"
   }
 }
