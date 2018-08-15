@@ -5,9 +5,9 @@ request('https://raw.githubusercontent.com/request/request/master/README.md')
 
 .pipe(new stream.Transform({
 
-        transform: function (a, en, cb) {
+        transform: function (chunk, en, cb) {
 
-            this.push(a.toString().toUpperCase());
+            this.push(chunk.toString().toUpperCase());
 
             cb();
 
