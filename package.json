@@ -1,0 +1,14 @@
+{
+  "name": "test_request",
+  "version": "1.0.0",
+  "description": "These are some demos that are used in posts on the npm package request, for my site here at github pages. Request is one of many http clients for a node.js environment, apart from just doing so vanilla js style with node.js built in solutions.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dustin Pfister",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "request": "^2.88.0"
+  }
+}
