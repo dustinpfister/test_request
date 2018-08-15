@@ -1,15 +1,16 @@
 let request = require('request'),
-stream = require('stream');
+crypto = require('crypto'),
+stream = require('stream'),
+fs = require('fs');
 
-// requesting "War, and peace" (it's over 500,000 words)
-request('http://www.textfiles.com/etext/FICTION/war_peace_text')
+fs.createReadStream('google.encrypted')
+
+.pipe(crypto.createDecipher('aes-256-cbc',process.argv[2] || '1234'))
 
 .pipe(new stream.Transform({
 
-        objectMode: true,
         transform: function (a, en, cb) {
 
-            // log each chunk as it comes in
             console.log(a.toString());
 
             cb();
@@ -23,4 +24,3 @@ request('http://www.textfiles.com/etext/FICTION/war_peace_text')
     console.log(err);
 
 });
-
